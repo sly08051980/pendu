@@ -177,9 +177,7 @@ function verifGagner(){
             console.log(gagne);
         }else {
             gagne = true;
-          
-            
-            
+               
         }
       
     })
