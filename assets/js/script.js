@@ -6,7 +6,7 @@ let alphabet=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q
 let boutton;
 let bouttonCliquer;
 let btn ="";
-let gagne;
+
 let lettreChercher=[];
 let lettreTrouvee = false;
 let lettreIdentique=false;
@@ -171,8 +171,8 @@ function image(){
 function verifGagner(){
     let tirets = document.querySelectorAll(".TiretMot > p");
 
- 
-    //let nombre="0";
+ let gagne = true;
+    
     tirets.forEach(unTiret => {
         console.log("Un tiret : ", unTiret);
         
@@ -180,15 +180,11 @@ function verifGagner(){
        
         if(unTiret.innerText === "_" ) {
             gagne = false;
-            console.log(gagne);
-            
-       
-           //nombre++;
-           //console.log(nombre);
-        }else /*if(nombre==0)*/ {
-            gagne = true;
-               
+           
+        
         }
+               
+        
     
     })
     if(gagne===true){
