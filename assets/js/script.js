@@ -170,16 +170,26 @@ function image(){
 
 function verifGagner(){
     let tirets = document.querySelectorAll(".TiretMot > p");
+
+ 
+    //let nombre="0";
     tirets.forEach(unTiret => {
         console.log("Un tiret : ", unTiret);
-        if(unTiret.innerText === "_") {
+        
+       
+       
+        if(unTiret.innerText === "_" ) {
             gagne = false;
             console.log(gagne);
-        }else {
+            
+       
+           //nombre++;
+           //console.log(nombre);
+        }else /*if(nombre==0)*/ {
             gagne = true;
                
         }
-      
+    
     })
     if(gagne===true){
         imgPendu.src="./assets/images/gagner.jpg";
