@@ -6,7 +6,7 @@ let alphabet=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q
 let boutton;
 let bouttonCliquer;
 let btn ="";
-let gagne;
+
 let lettreChercher=[];
 let lettreTrouvee = false;
 let lettreIdentique=false;
@@ -170,18 +170,22 @@ function image(){
 
 function verifGagner(){
     let tirets = document.querySelectorAll(".TiretMot > p");
+
+ let gagne = true;
+    
     tirets.forEach(unTiret => {
         console.log("Un tiret : ", unTiret);
-        if(unTiret.innerText === "_") {
+        
+       
+       
+        if(unTiret.innerText === "_" ) {
             gagne = false;
-            console.log(gagne);
-        }else {
-            gagne = true;
-          
-            
-            
+           
+        
         }
-      
+               
+        
+    
     })
     if(gagne===true){
         imgPendu.src="./assets/images/gagner.jpg";
